@@ -1,0 +1,60 @@
+# Options
+setopt APPEND_HISTORY \
+       AUTOPUSHD \
+       AUTO_CD \
+       AUTO_REMOVE_SLASH \
+       CDABLEVARS \
+       CHASE_LINKS \
+       CLOBBER \
+       COMPLETE_ALIASES \
+       CORRECT \
+       CORRECTALL \
+       EXTENDED_GLOB \
+       GLOB_COMPLETE \
+       HIST_IGNORE_ALL_DUPS \
+       HIST_IGNORE_DUPS \
+       HIST_IGNORE_SPACE \
+       HIST_REDUCE_BLANKS \
+       HIST_VERIFY \
+       INC_APPEND_HISTORY \
+       INTERACTIVECOMMENTS \
+       LIST_TYPES \
+       MARK_DIRS \
+       MULTIOS \
+       NO_BEEP \
+       NO_CASE_GLOB \
+       NOHUP \
+       NULLGLOB \
+       NUMERIC_GLOB_SORT\
+       PATH_DIRS \
+       PROMPT_PERCENT \
+       PROMPT_SUBST \
+       PUSHDMINUS \
+       PUSHDSILENT \
+       PUSHDTOHOME \
+       RM_STAR_WAIT \
+       SH_WORD_SPLIT
+# cd option
+  setopt autocd
+
+
+# (needed by the vcs_info module, i.e. ${vcs_info_msg_N_})
+unalias run-help
+autoload run-help
+
+#   Inline completion
+set always_to_end
+
+# color ls
+eval `dircolors -b`
+
+# limits {{{
+######################################################################
+# Limits
+######################################################################
+
+ulimit -u 1024
+# ulimit -v `cat /proc/meminfo | head -1 | tr -s ' ' | cut -d' ' -f2`
+ulimit -v ${${(s. .)${(M)${(f)"$(</proc/meminfo)"}##MemTotal: *}}[2]}
+
+# }}}

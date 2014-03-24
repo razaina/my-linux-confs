@@ -1,0 +1,111 @@
+!{{{ URXVT
+!
+urxvt*saveLines:         65535
+urxvt*scrollTtyKeypress: true
+urxvt*scrollTtyOutput:   false
+urxvt*scrollBar:         false
+urxvt*loginShell:        true
+urxvt*termName:          rxvt-unicode
+
+## teh transparency stuff
+URxvt*inheritPixmap:     true
+URxvt*tintColor:         white
+URxvt*transparence:      true
+transparent:		 true
+URxvt*depth:             32
+URxvt*shading:           30
+
+URxvt*cutchars:          "()*,<>[]{}|"
+URxvt*print-pipe:        cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+URxvt*secondaryScroll:   true
+URxvt*secondaryWheel:    true
+URxvt*mapAlert:          true
+URxvt*utmpInhibit:       true
+URxvt*xftAntialias:      true
+urxvt*borderless:        true
+URxvt.insecure:          true
+URxvt*internalBorder:    1
+URxvt*imLocale:          fr_FR.UTF-8
+URxvt*perl-lib:          /usr/lib/urxvt/perl/
+#URxvt*perl-ext-common:   default,matcher,searchable-scrollback,clipboard,block-graphics-to-ascii,keyboard-select
+URxvt*perl-ext-common:   default,matcher,searchable-scrollback,tabbed,clipboard,block-graphics-to-ascii,keyboard-select
+
+URxvt*urlLauncher:       firefox
+URxvt.underlineURLs:     true
+URxvt*matcher.pattern.1: \\b(mailto|http|https|ftp|file):[/]*[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+URxvt*matcher.pattern.2: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+
+urxvt*matcher.button:    1
+URxvt.keysym.M-Escape:   perl:keyboard-select:activate
+URxvt.buffered:          true
+URxvt*faceName:          xft:DejaVu Sans Mono:size=05:antialias=true
+!URxvt*background:        rgba:022b/022b/022b/dddd
+URxvt*background:        black
+URxvt*foreground:        lightgreen
+!URxvt*borderLess:	true
+!}}}
+
+
+!{{{ XSCREENSAVER
+! xscreensaver theme from thayer
+! http://www.flickr.com/photos/cinderwick/2685038363/
+xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.foreground:         #ffffff
+xscreensaver.Dialog.background:         #111111
+xscreensaver.Dialog.topShadowColor:     #111111
+xscreensaver.Dialog.bottomShadowColor:  #111111
+xscreensaver.Dialog.Button.foreground:  #666666
+xscreensaver.Dialog.Button.background:  #ffffff
+xscreensaver.Dialog.text.foreground:    #666666
+xscreensaver.Dialog.text.background:    #ffffff
+xscreensaver.Dialog.internalBorderWidth:24
+xscreensaver.Dialog.borderWidth:        20
+xscreensaver.Dialog.shadowThickness:    2
+xscreensaver.passwd.thermometer.foreground:  #ff0000
+xscreensaver.passwd.thermometer.background:  #000000
+xscreensaver.passwd.thermometer.width:       8
+xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+! }}}
+
+
+
+!colors {{{
+!black
+*color0:  #222222
+*color8:  #454545
+
+!red
+!*color1:  #8E5C4E
+!*color9:  #CC896D
+
+!green
+!*color2:  #6C7E55
+!*color10: #C4DF90
+
+!yellow
+!*color3:  #B89F63
+!*color11: #FFE080
+
+!blue
+*color4:  #4682b4
+*color12: #6495ed
+
+!magenta
+!*color5:  #956D9D
+!*color13: #C18FCB
+
+!cyan
+*color6:  #4c8ea1
+*color14: #6bc1d0
+
+!white
+*color7:  #cccccc
+*color15: #ffffff
+
+!}}}
