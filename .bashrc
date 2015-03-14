@@ -1,9 +1,26 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+export JAVA_HOME=/opt/jdk/jdk1.7.0_75/
+export ANDROID_SDK=/home/razaina/Development/android-sdk-linux
+export ANDROID_NDK=/home/razaina/android-ndk-r10d
+export ANDROID_PLATFORMS=/home/razaina/Development/android-sdk-linux/platforms
+export ANDROID_TOOLS=/home/razaina/Development/android-sdk-linux/tools
+export ANDROID_GDB=/home/razaina/android-ndk-r10d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86/bin/
+export ADBI=/home/razaina/Gits/adbi
+export DDI=/home/razaina/Gits/ddi
+export PYTHONPATH=/home/razaina/Gits/AndBug/lib
+export
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/razaina/Development/android-sdk-linux/tools/lib:/usr/lib/neko
+export __LINUX__=1
+export IDA_SDK_BIN=/home/razaina/idasdk66/bin/
+export HEXAGON_TOOLS_SRC=/home/razaina/Hexagon_Tools/src/source/
+export IDA_HOME=/home/razaina/ida-6.6/
+export ANDROID_TOOLCHAINS_BIN=/home/razaina/android-ndk-r10d/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin
+export HAXE_STD_PATH=/home/razaina/haxe-3.1.3/std:.
 
 
-
+PATH=$PATH:$PYTHONPATH:$ANDROID_NDK:$ANDROID_SDK:$ANDROID_PLATFORMS:$ANDROID_TOOLS:$LD_LIBRARY_PATH:$IDA_SDK_BIN:$HEXAGON_TOOLS_SRC:$ANDROID_GDB:$IDA_HOME:$ANDROID_TOOLCHAINS_BIN
 
 
 # If not running interactively, don't do anything
@@ -41,7 +58,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|rxvt-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -51,12 +68,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
@@ -112,3 +129,19 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+make()
+{
+   ccred=$(echo -e "33[1;31m")
+   ccyellow=$(echo -e "33[1;33m")
+   ccend=$(echo -e "33[0m")
+   /usr/bin/make "$@" 2>&1 | sed -e "s/[Ee]rror:/$ccred&$ccend/g" -e "s/[Ww]arning:/$ccyellow&$ccend/g"
+   return ${PIPESTATUS[0]}
+}
+
+if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh ]; then
+    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
+fi
+
+export TERM=rxvt-256color

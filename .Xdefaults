@@ -5,7 +5,8 @@ urxvt*scrollTtyKeypress: true
 urxvt*scrollTtyOutput:   false
 urxvt*scrollBar:         false
 urxvt*loginShell:        true
-urxvt*termName:          rxvt-unicode
+urxvt*termName:          rxvt-256color
+URxvt.iso14755:         False
 
 ## teh transparency stuff
 URxvt*inheritPixmap:     true
@@ -25,9 +26,8 @@ URxvt*xftAntialias:      true
 urxvt*borderless:        true
 URxvt.insecure:          true
 URxvt*internalBorder:    1
-URxvt*imLocale:          fr_FR.UTF-8
+URxvt*imLocale:          en_US.utf8
 URxvt*perl-lib:          /usr/lib/urxvt/perl/
-#URxvt*perl-ext-common:   default,matcher,searchable-scrollback,clipboard,block-graphics-to-ascii,keyboard-select
 URxvt*perl-ext-common:   default,matcher,searchable-scrollback,tabbed,clipboard,block-graphics-to-ascii,keyboard-select
 
 URxvt*urlLauncher:       firefox
@@ -38,10 +38,27 @@ URxvt*matcher.pattern.2: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 urxvt*matcher.button:    1
 URxvt.keysym.M-Escape:   perl:keyboard-select:activate
 URxvt.buffered:          true
-URxvt*faceName:          xft:DejaVu Sans Mono:size=05:antialias=true
+URxvt*font:             xft:Source\ Code\ Pro\ for\ Powerline:size=8:regular:antialias=true
+URxvt*imFont:           xft:Source\ Code\ Pro\ for\ Powerline:size=8:regular:antialias=true
+URxvt*boldFont:         xft:Source\ Code\ Pro\ for\ Powerline:size=8:regular:antialias=true
+URxvt*italicFont:       xft:Source\ Code\ Pro\ for\ Powerline:size=8:italic:antialias=true
+URxvt*boldItalicFont:   xft:Source\ Code\ Pro\ for\ Powerline:size=8:boldItalic:antialias=true
+!URxvt*faceName: xft:Source\ Code\ Pro\ Medium,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8:regular
+!URxvt*imFont: xft:Source\ Code\ Pro\ Medium,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8:regular
+!URxvt*boldFont: xft:Source\ Code\ Pro\ Medium,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8:bold
+
+!URxvt*italicFont: xft:Source\ Code\ Pro\ Medium,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8:italic
+!URxvt*imFont:            xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=11:regular
+!URxvt*boldFont:          xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=11:bold
+!URxvt*italicFont:        xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=11:italic
+!URxvt*boldItalicFont:    xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=11:bold:italic
+
 !URxvt*background:        rgba:022b/022b/022b/dddd
 URxvt*background:        black
-URxvt*foreground:        lightgreen
+URxvt*foreground:        cyan
+
+
+
 !URxvt*borderLess:	true
 !}}}
 
@@ -56,21 +73,42 @@ xscreensaver.Dialog.unameFont:          -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
 xscreensaver.Dialog.buttonFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
 xscreensaver.Dialog.dateFont:           -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
 xscreensaver.passwd.passwdFont:         -*-dina-bold-r-*-*-12-*-*-*-*-*-*-*
-xscreensaver.Dialog.foreground:         #ffffff
-xscreensaver.Dialog.background:         #111111
-xscreensaver.Dialog.topShadowColor:     #111111
-xscreensaver.Dialog.bottomShadowColor:  #111111
-xscreensaver.Dialog.Button.foreground:  #666666
-xscreensaver.Dialog.Button.background:  #ffffff
-xscreensaver.Dialog.text.foreground:    #666666
-xscreensaver.Dialog.text.background:    #ffffff
-xscreensaver.Dialog.internalBorderWidth:24
-xscreensaver.Dialog.borderWidth:        20
-xscreensaver.Dialog.shadowThickness:    2
-xscreensaver.passwd.thermometer.foreground:  #ff0000
-xscreensaver.passwd.thermometer.background:  #000000
-xscreensaver.passwd.thermometer.width:       8
+!xscreensaver.Dialog.foreground:         #ffffff
+!xscreensaver.Dialog.background:         #111111
+!xscreensaver.Dialog.topShadowColor:     #111111
+!xscreensaver.Dialog.bottomShadowColor:  #111111
+!xscreensaver.Dialog.Button.foreground:  #666666
+!xscreensaver.Dialog.Button.background:  #ffffff
+!xscreensaver.Dialog.text.foreground:    #666666
+!xscreensaver.Dialog.text.background:    #ffffff
+!xscreensaver.Dialog.internalBorderWidth:24
+!xscreensaver.Dialog.borderWidth:        20
+!xscreensaver.Dialog.shadowThickness:    2
+!xscreensaver.passwd.thermometer.foreground:  #ff0000
+!xscreensaver.passwd.thermometer.background:  #000000
+!xscreensaver.passwd.thermometer.width:       8
 xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
+xscreensaver.timeout: 2
+xscreensaver.cycle: 1
+
+xscreensaver.Dialog.foreground:         #449900
+xscreensaver.Dialog.background:         #000000
+xscreensaver.Dialog.topShadowColor:     #000000
+xscreensaver.Dialog.bottomShadowColor:  #000000
+xscreensaver.Dialog.Button.foreground:  #449900
+xscreensaver.Dialog.Button.background:  #000000
+ 
+!username/password input box and date text colour
+xscreensaver.Dialog.text.foreground:    #00FF00
+xscreensaver.Dialog.text.background:    #171717
+xscreensaver.Dialog.internalBorderWidth:24
+xscreensaver.Dialog.borderWidth:        0
+xscreensaver.Dialog.shadowThickness:    2
+ 
+!timeout bar (background is actually determined by Dialog.text.background)
+xscreensaver.passwd.thermometer.foreground:  #00FF00
+xscreensaver.passwd.thermometer.background:  #171717
+xscreensaver.passwd.thermometer.width:       8
 ! }}}
 
 
