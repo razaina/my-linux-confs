@@ -1,0 +1,5 @@
+set homepage=http://razaina.fr
+set plugins=true
+set scrollbars=false
+set scripts=true
+set cookies_storage_readonly=true

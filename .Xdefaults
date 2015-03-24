@@ -6,7 +6,7 @@ urxvt*scrollTtyOutput:   false
 urxvt*scrollBar:         false
 urxvt*loginShell:        true
 urxvt*termName:          rxvt-256color
-URxvt.iso14755:         False
+URxvt.iso14755:          false 
 
 ## teh transparency stuff
 URxvt*inheritPixmap:     true
@@ -30,7 +30,7 @@ URxvt*imLocale:          en_US.utf8
 URxvt*perl-lib:          /usr/lib/urxvt/perl/
 URxvt*perl-ext-common:   default,matcher,searchable-scrollback,tabbed,clipboard,block-graphics-to-ascii,keyboard-select
 
-URxvt*urlLauncher:       firefox
+URxvt*urlLauncher:       iceweasel
 URxvt.underlineURLs:     true
 URxvt*matcher.pattern.1: \\b(mailto|http|https|ftp|file):[/]*[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 URxvt*matcher.pattern.2: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
@@ -38,20 +38,20 @@ URxvt*matcher.pattern.2: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 urxvt*matcher.button:    1
 URxvt.keysym.M-Escape:   perl:keyboard-select:activate
 URxvt.buffered:          true
-URxvt*font:             xft:Source\ Code\ Pro\ for\ Powerline:size=8:regular:antialias=true
-URxvt*imFont:           xft:Source\ Code\ Pro\ for\ Powerline:size=8:regular:antialias=true
-URxvt*boldFont:         xft:Source\ Code\ Pro\ for\ Powerline:size=8:regular:antialias=true
-URxvt*italicFont:       xft:Source\ Code\ Pro\ for\ Powerline:size=8:italic:antialias=true
-URxvt*boldItalicFont:   xft:Source\ Code\ Pro\ for\ Powerline:size=8:boldItalic:antialias=true
+URxvt*font:             xft:Source\ Code\ Pro\ for\ Powerline:size=7:regular:antialias=true
+URxvt*imFont:           xft:Source\ Code\ Pro\ for\ Powerline:size=7:regular:antialias=true
+URxvt*boldFont:         xft:Source\ Code\ Pro\ for\ Powerline:size=7:regular:antialias=true
+URxvt*italicFont:       xft:Source\ Code\ Pro\ for\ Powerline:size=7:italic:antialias=true
+URxvt*boldItalicFont:   xft:Source\ Code\ Pro\ for\ Powerline:size=7:boldItalic:antialias=true
 !URxvt*faceName: xft:Source\ Code\ Pro\ Medium,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8:regular
 !URxvt*imFont: xft:Source\ Code\ Pro\ Medium,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8:regular
 !URxvt*boldFont: xft:Source\ Code\ Pro\ Medium,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8:bold
 
 !URxvt*italicFont: xft:Source\ Code\ Pro\ Medium,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8,xft:Source\ Code\ Pro\ Medium for Powerline:pixelsize=8:italic
-!URxvt*imFont:            xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=11:regular
-!URxvt*boldFont:          xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=11:bold
-!URxvt*italicFont:        xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=11:italic
-!URxvt*boldItalicFont:    xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=11:bold:italic
+!URxvt*imFont:            xft:Terminus:pixelsize=7,xft:Inconsolata\ for\ Powerline:pixelsize=7:regular
+!URxvt*boldFont:          xft:Terminus:pixelsize=7,xft:Inconsolata\ for\ Powerline:pixelsize=7:bold
+!URxvt*italicFont:        xft:Terminus:pixelsize=7,xft:Inconsolata\ for\ Powerline:pixelsize=7:italic
+!URxvt*boldItalicFont:    xft:Terminus:pixelsize=7,xft:Inconsolata\ for\ Powerline:pixelsize=7:bold:italic
 
 !URxvt*background:        rgba:022b/022b/022b/dddd
 URxvt*background:        black

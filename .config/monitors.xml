@@ -1,0 +1,21 @@
+<monitors version="1">
+  <configuration>
+      <clone>no</clone>
+      <output name="LVDS1">
+          <vendor>HSD</vendor>
+          <product>0x03e9</product>
+          <serial>0x0000200f</serial>
+          <width>1024</width>
+          <height>600</height>
+          <rate>60</rate>
+          <x>0</x>
+          <y>0</y>
+          <rotation>normal</rotation>
+          <reflect_x>no</reflect_x>
+          <reflect_y>no</reflect_y>
+          <primary>yes</primary>
+      </output>
+      <output name="VGA1">
+      </output>
+  </configuration>
+</monitors>
